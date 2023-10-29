@@ -1,0 +1,51 @@
+#input{
+  text-align: center;
+}
+
+.ip{
+  padding: 10px;
+  margin-right: 20px;
+}
+
+#item-box{
+  text-align: center;
+}
+
+.grid-container{
+  /* text-align: center; */
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+#heading{
+  text-align: center;
+}
+
+#input{
+  margin-bottom: 20px;
+}
+
+#del{
+  background-color: rgb(87, 4, 4);
+  color:white;
+  padding: 15px 0px;
+  border: none;
+  border-radius: 10px;
+}
+
+#add{
+  background-color: rgb(9, 102, 17);
+  color:white;
+  padding: 15px 0px;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+}
+
+body{
+  display:flex;
+  justify-content: center;
+}
