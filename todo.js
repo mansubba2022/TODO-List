@@ -2,8 +2,8 @@ let todoList;
 displayTodo();
 function addTodo() {
   let c = localStorage.getItem("todoList");
-  console.log(String(c)==="undefined");
-  if (String(c)==="undefined") {
+  // console.log(String(c)==="undefined");
+  if (String(c) === "undefined") {
     console.log("inside c....." + c);
     todoList = [];
   }
@@ -14,11 +14,13 @@ function addTodo() {
 
   let content = document.querySelector("#ip").value;
   let date = document.querySelector("#dt").value;
-  let input = content ? { content: `${content}`, date: `${date}` } : {};
+  let input = (content && date) ? { content: `${content}`, date: `${date}` } : false;
 
+  if (input != false) {
+    todoList.push(input);
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+  }
 
-  todoList.push(input);
-  localStorage.setItem("todoList", JSON.stringify(todoList));
   displayTodo();
 }
 
